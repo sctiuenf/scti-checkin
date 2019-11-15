@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="colorPrimary">#4DABCF</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimaryDark">#1b1e28</color>
     <color name="colorAccent">#159859</color>
+    <color name="colorPrimaryLight">#EEE</color>
+    <color name="colorGrey">#666</color>
+
+    <color name="colorShortCourse">#a60202</color>
+    <color name="colorLecture">#947b01</color>
+    <color name="colorSpecial">#850085</color>
+
+    <color name="safe">#0F0</color>
+    <color name="warn">#F00</color>
 
     <color name="event_list_bg">#EEEEEE</color>
 </resources>

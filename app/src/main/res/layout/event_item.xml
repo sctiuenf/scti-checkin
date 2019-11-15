@@ -2,25 +2,68 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="8dp"
-    android:layout_marginBottom="8dp"
-    android:elevation="2dp"
+    android:layout_marginBottom="12dp"
     android:background="@drawable/event_item_bg"
-    android:orientation="vertical">
+    android:elevation="4dp"
+    android:foreground="?android:selectableItemBackground"
+    android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/event_item_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:text="Nome Placeholder" />
+    <View
+        android:id="@+id/event_item_indicator"
+        android:layout_width="8dp"
+        android:layout_height="match_parent"
+        android:background="#000" />
 
-    <TextView
-        android:id="@+id/event_item_date"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:text="XX:XX - XX:XX" />
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/event_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Nome Placeholder"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/event_item_type"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:padding="4dp"
+                android:text="MINICURSO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="10sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/event_item_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_date"
+                android:drawablePadding="4dp"
+                android:gravity="right"
+                android:textColor="@color/colorGrey"
+                android:text="XX:XX - XX:XX"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

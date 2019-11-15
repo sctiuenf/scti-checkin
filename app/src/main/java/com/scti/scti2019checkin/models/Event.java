@@ -1,33 +1,39 @@
 package com.scti.scti2019checkin.models;
 
 public class Event {
-    private int id;
-    private int sctiId;
-    private String name;
-    private String date;
+    public static final String TYPE_MINICOURSE = "minicurso", TYPE_LECTURE = "palestra", TYPE_SPECIAL = "null";
 
-    public Event(int id, int sctiId, String name, String date) {
+    private int id;
+    private String title;
+    private String type;
+    private String beginDate;
+    private String endDate;
+
+    public Event(int id, String title, String type, String beginDate, String endDate) {
         this.id = id;
-        this.sctiId = sctiId;
-        this.name = name;
-        this.date = date;
+        this.title = title;
+        this.type = type;
+        this.beginDate = beginDate;
+        this.endDate = endDate;
     }
 
     public int getId() {
         return id;
     }
 
-    public int getSctiId() {
-        return sctiId;
+    public String getTitle() {
+        return title;
     }
 
-    public String getName() {
-        return name;
+    public String getType() {
+        return type;
     }
 
-    public String getDate() {
-        return date;
+    public String getBeginDate() {
+        return beginDate;
     }
 
-
+    public String getEndDate() {
+        return endDate;
+    }
 }

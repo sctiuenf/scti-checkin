@@ -1,3 +1,50 @@
 <resources>
-    <string name="app_name">SCTI 2019 Check In</string>
+    <string name="app_name" translatable="false">SCTI 2019 Check In</string>
+    <string name="app_sharedPref_file">com.scti.checkin.preffile</string>
+    <string name="app_sharedPref_token">com.scti.checkin.token</string>
+    <string name="app_sharedPref_selector">com.scti.checkin.selector</string>
+    <string name="app_sharedPref_mail">com.scti.checkin.mail</string>
+    <string name="app_sharedPref_syncstatus">com.scti.checkin.syncstatus</string>
+
+    <!--Login-->
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Senha</string>
+    <string name="login_button_text">Entrar</string>
+
+    <!--Scanner-->
+    <string name="scanner_message">Posicione o QRCode na área indicada</string>
+    <string name="scanner_fail">Falha na leitura</string>
+    <string name="scanner_invalid">QRCode inválido</string>
+
+    <!--Auth-->
+    <string name="auth_dialog_title">Aguarde</string>
+    <string name="auth_dialog_message">Verificando credenciais...</string>
+    <string name="auth_required">Campo obrigatório</string>
+    <string name="auth_connection_error">Falha na conexão</string>
+
+    <!--Events-->
+    <string name="events_get_dialog_title">Aguarde</string>
+    <string name="events_get_dialog_message">Baixando dados</string>
+    <string name="events_menu_get">Baixar dados</string>
+    <string name="events_menu_post">Enviar presenças</string>
+    <string name="events_menu_logoff">Sair</string>
+    <string name="events_get_fail">Falha no download</string>
+    <string name="events_get_success">Dados baixados com sucesso</string>
+    <string name="events_post_dialog_title">Aguarde</string>
+    <string name="events_post_dialog_message">Enviando as presenças coletadas</string>
+    <string name="events_post_fail">Falha no envio das presenças</string>
+    <string name="events_post_success">Presenças enviadas com sucesso</string>
+    <string name="events_lecture">Palestra</string>
+    <string name="events_shortcourse">Minicurso</string>
+    <string name="events_special">Especial</string>
+    <string name="events_forced_dialog_title">Atenção!</string>
+    <string name="events_forced_dialog_message">não esta inscrito neste evento, tem certeza que deseja continuar?</string>
+    <string name="events_forced_confirm">Sim</string>
+    <string name="events_forced_decline">Cancelar</string>
+    <string name="events_presence_repeated">Presença repetida</string>
+    <string name="events_status_synced">Todos as presenças foram enviadas</string>
+    <string name="events_status_nosynced">Existem presencas que não foram enviadas</string>
+
+    <!--PickParticipant-->
+    <string name="pick_search_hint">Procurar participante</string>
 </resources>

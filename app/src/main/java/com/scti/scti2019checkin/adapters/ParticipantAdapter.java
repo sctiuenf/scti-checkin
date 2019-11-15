@@ -6,10 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.scti.scti2019checkin.R;
-import com.scti.scti2019checkin.holders.ParticipantHolder;
-import com.scti.scti2019checkin.models.Event;
+import com.scti.scti2019checkin.interfaces.OnRecyclerViewClickListener;
 import com.scti.scti2019checkin.models.Participant;
 
 import java.util.List;
@@ -17,10 +17,12 @@ import java.util.List;
 public class ParticipantAdapter extends RecyclerView.Adapter {
     private List<Participant> participants;
     private Context context;
+    private OnRecyclerViewClickListener listener;
 
-    public ParticipantAdapter(List<Participant> participants, Context context) {
+    public ParticipantAdapter(List<Participant> participants, Context context, OnRecyclerViewClickListener listener) {
         this.participants = participants;
         this.context = context;
+        this.listener = listener;
     }
 
     @NonNull
@@ -39,6 +41,27 @@ public class ParticipantAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return participants.size();
+    }
+
+    public class ParticipantHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        private TextView participantNameView;
+
+        ParticipantHolder(View itemView) {
+            super(itemView);
+
+            this.participantNameView = itemView.findViewById(R.id.participant_item_name);
+
+            itemView.setOnClickListener(this);
+        }
+
+        TextView getParticipantNameView() {
+            return participantNameView;
+        }
+
+        @Override
+        public void onClick(View view) {
+            listener.onClick(view, getLayoutPosition());
+        }
     }
 }
